@@ -1,0 +1,6 @@
+*.py[c|o]
+
+settings.json
+
+__pycache__
+venv
