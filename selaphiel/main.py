@@ -34,9 +34,9 @@ async def on_message(message):
     if message.channel.id not in settings.discord_channel_ids:
         return
 
-    content = f'{message.content} ({message.author.name})'
+    content = f'{message.content} ({message.author.global_name})'
     contents = split_tweet(content)
-
+    
     for content in contents:
         result = twitter.create_tweet(text=content)
         print(result)
